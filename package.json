@@ -1,0 +1,12 @@
+{
+  "name": "nilam-book-database",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate.js",
+    "merge": "node scripts/merge.js",
+    "validate": "node scripts/validate.js",
+    "build": "npm run generate && npm run merge && npm run validate"
+  }
+}

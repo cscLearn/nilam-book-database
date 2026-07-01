@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NILAM book record",
+  "type": "object",
+  "required": [
+    "id",
+    "source",
+    "category",
+    "language",
+    "title",
+    "author",
+    "publisher",
+    "year",
+    "pages",
+    "isbn",
+    "isbn_type",
+    "rumusan",
+    "lesson",
+    "quality",
+    "created",
+    "version"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "source": { "enum": ["verified", "synthetic"] },
+    "category": { "enum": ["Fiksyen", "Bukan Fiksyen"] },
+    "language": { "enum": ["bm", "en", "zh"] },
+    "title": { "type": "string" },
+    "author": { "type": "string" },
+    "publisher": { "type": "string" },
+    "year": { "type": "integer", "minimum": 1900 },
+    "pages": { "type": "integer", "minimum": 1 },
+    "isbn": { "type": "string", "pattern": "^978[0-9]{10}$" },
+    "isbn_type": { "enum": ["verified", "synthetic"] },
+    "rumusan": { "type": "string" },
+    "lesson": { "type": "string" },
+    "quality": { "enum": ["verified", "high", "medium", "draft"] },
+    "created": { "type": "string" },
+    "version": { "type": "string" }
+  },
+  "additionalProperties": false
+}
