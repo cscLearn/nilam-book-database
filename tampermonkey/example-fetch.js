@@ -1,8 +1,8 @@
 // Tampermonkey metadata needed:
 // @grant   GM_xmlhttpRequest
-// @connect 127.0.0.1
+// @connect raw.githubusercontent.com
 
-const DATA_URL = "http://127.0.0.1:8765/data/merged/books-all.json";
+const DATA_URL = "https://raw.githubusercontent.com/cscLearn/nilam-book-database/main/data/merged/books-all.json";
 
 function loadBooks() {
   return new Promise((resolve, reject) => {
