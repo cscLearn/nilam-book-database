@@ -30,7 +30,7 @@
     "publisher": { "type": "string" },
     "year": { "type": "integer", "minimum": 1900 },
     "pages": { "type": "integer", "minimum": 1 },
-    "isbn": { "type": "string", "pattern": "^978-[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]$" },
+    "isbn": { "type": "string", "pattern": "^978-[0-9]+-[0-9]+-[0-9]+-[0-9]+$" },
     "isbn_type": { "enum": ["verified", "synthetic"] },
     "rumusan": { "type": "string" },
     "lesson": { "type": "string" },
