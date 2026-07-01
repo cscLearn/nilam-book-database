@@ -21,8 +21,9 @@ const required = [
 ];
 
 function isValidIsbn13(isbn) {
-  if (!/^978\d{10}$/.test(isbn)) return false;
-  const digits = [...isbn].map(Number);
+  const compact = String(isbn).replaceAll("-", "");
+  if (!/^978\d{10}$/.test(compact)) return false;
+  const digits = [...compact].map(Number);
   const sum = digits.slice(0, 12).reduce((total, digit, index) => total + digit * (index % 2 === 0 ? 1 : 3), 0);
   return digits[12] === (10 - (sum % 10)) % 10;
 }

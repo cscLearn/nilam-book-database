@@ -55,7 +55,8 @@ const specs = [
 function isbn13(seed) {
   const body = `978${String(seed).padStart(9, "0")}`;
   const sum = [...body].reduce((total, digit, index) => total + Number(digit) * (index % 2 === 0 ? 1 : 3), 0);
-  return `${body}${(10 - (sum % 10)) % 10}`;
+  const isbn = `${body}${(10 - (sum % 10)) % 10}`;
+  return `${isbn.slice(0, 3)}-${isbn.slice(3, 6)}-${isbn.slice(6, 9)}-${isbn.slice(9, 12)}-${isbn.slice(12)}`;
 }
 
 function makeBook([title, author, publisher, year, pages, rumusan, lesson], source, categorySlug, language, index) {
