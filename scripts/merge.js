@@ -12,6 +12,7 @@ async function readJson(file) {
 async function main() {
   const all = [];
   const byCategory = new Map(categories.map((category) => [category, []]));
+  const byLanguage = new Map(languages.map((lang) => [lang, []]));
 
   for (const layer of layers) {
     for (const category of categories) {
@@ -20,6 +21,7 @@ async function main() {
         const books = await readJson(file);
         all.push(...books);
         byCategory.get(category).push(...books);
+        byLanguage.get(language).push(...books);
       }
     }
   }
@@ -28,9 +30,13 @@ async function main() {
   await writeFile(path.join("data", "merged", "books-all.json"), `${JSON.stringify(all, null, 2)}\n`);
   await writeFile(path.join("data", "merged", "books-fiksyen.json"), `${JSON.stringify(byCategory.get("fiksyen"), null, 2)}\n`);
   await writeFile(path.join("data", "merged", "books-bukan-fiksyen.json"), `${JSON.stringify(byCategory.get("bukan-fiksyen"), null, 2)}\n`);
+  for (const lang of languages) {
+    await writeFile(path.join("data", "merged", `books-${lang}.json`), `${JSON.stringify(byLanguage.get(lang), null, 2)}\n`);
+  }
 
   const files = await readdir(path.join("data", "merged"));
   console.log(`Merged ${all.length} books into ${files.length} files.`);
+
 }
 
 main().catch((error) => {

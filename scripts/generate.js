@@ -552,7 +552,7 @@ function generateBm(categorySlug) {
       "sopan": "kesopanan", "amanah": "sifat amanah"
     };
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 3000; i++) {
       const tId = i % bmFictionTemplates.length;
       const n = nama[i % nama.length];
       const h = haiwan[(i + 3) % haiwan.length];
@@ -581,7 +581,7 @@ function generateBm(categorySlug) {
     // Bukan Fiksyen
     const topics = ["cuaca", "sistem air", "hujan", "matahari", "bulan", "bintang", "planet", "awan", "angin", "tanah", "batu", "pasir", "lautan", "sungai", "tasik", "kolam", "hutan", "gunung", "lembah", "padang pasir", "haiwan peliharaan", "haiwan liar", "burung", "ikan", "serangga", "reptilia", "mamalia", "tumbuhan", "bunga", "buah-buahan", "sayur-sayuran", "pokok", "daun", "akar", "kitar semula", "sampah", "plastik", "kertas", "kaca", "logam", "kesihatan", "kebersihan", "gigi", "mata", "telinga", "kulit", "rambut", "jantung", "paru-paru", "otak", "tulang", "otot", "makanan", "minuman", "susu", "roti", "nasi", "buah", "sayur", "daging", "sukan", "bola sepak", "badminton", "berenang", "berlari", "berbasikal", "sejarah", "budaya", "muzik", "lukisan", "tarian", "permainan tradisi", "sains", "matematik", "teknologi", "komputer", "internet", "angkasa", "tenaga", "elektrik", "magnet", "cahaya", "bunyi", "haba", "graviti", "air bersih", "udara bersih", "kebun sayur", "peternakan", "perikanan", "pertanian", "pengangkutan", "kereta", "keretapi", "kapal terbang", "kapal laut", "keselamatan", "kebakaran", "pertolongan cemas", "adab sopan"];
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 3000; i++) {
       const tId = i % bmNonFictionTemplates.length;
       const topic = topics[i % topics.length];
 
@@ -621,7 +621,7 @@ function generateEn(categorySlug) {
       "helpful": "helpfulness", "loyal": "loyalty"
     };
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 3000; i++) {
       const tId = i % enFictionTemplates.length;
       const n = names[i % names.length];
       const h = animals[(i + 3) % animals.length];
@@ -650,7 +650,7 @@ function generateEn(categorySlug) {
     // Non-Fiction
     const topics = ["weather", "water systems", "rain", "the sun", "the moon", "stars", "planets", "clouds", "wind", "soil", "rocks", "sand", "oceans", "rivers", "lakes", "ponds", "forests", "mountains", "valleys", "deserts", "pets", "wildlife", "birds", "fish", "insects", "reptiles", "mammals", "plants", "flowers", "fruits", "vegetables", "trees", "leaves", "roots", "recycling", "waste", "plastics", "paper", "glass", "metals", "health", "hygiene", "teeth", "eyes", "ears", "skin", "hair", "the heart", "lungs", "the brain", "bones", "muscles", "food", "drinks", "milk", "bread", "rice", "fruits", "vegetables", "meat", "sports", "football", "badminton", "swimming", "running", "cycling", "history", "culture", "music", "art", "dance", "traditional games", "science", "mathematics", "technology", "computers", "the internet", "outer space", "energy", "electricity", "magnets", "light", "sound", "heat", "gravity", "clean water", "clean air", "vegetable gardens", "farming", "fishing", "agriculture", "transportation", "cars", "trains", "airplanes", "ships", "safety", "fire safety", "first aid", "good manners"];
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 3000; i++) {
       const tId = i % enNonFictionTemplates.length;
       const topic = topics[i % topics.length];
 
@@ -690,7 +690,7 @@ function generateZh(categorySlug) {
       "乐于助人的": "互助", "守信用的": "守信"
     };
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 3000; i++) {
       const tId = i % zhFictionTemplates.length;
       const n = names[i % names.length];
       const h = animals[(i + 3) % animals.length];
@@ -719,7 +719,7 @@ function generateZh(categorySlug) {
     // Non-Fiction
     const topics = ["天气变化", "水资源系统", "降雨现象", "太阳的奥秘", "月球探索", "闪烁的星星", "八大行星", "云朵的形成", "风的力量", "泥土与植物", "岩石与矿物", "沙子的故事", "辽阔的海洋", "奔流的河流", "美丽的湖泊", "小池塘生态", "森林生态系统", "雄伟的山脉", "神秘的山谷", "荒凉的沙漠", "可爱的小宠物", "野生动物世界", "天空中的鸟类", "水中的鱼类", "神奇的昆虫", "爬行动物科普", "哺乳动物特征", "绿色植物生长", "美丽的花朵", "水果的生长", "蔬菜的营养", "高大的树木", "树叶的光合作用", "植物的根部", "垃圾分类知识", "生活垃圾处理", "塑料制品的危害", "纸张回收利用", "玻璃制品工艺", "金属材料分类", "身体健康管理", "个人卫生习惯", "牙齿保健常识", "眼睛保护指南", "耳朵的奥秘", "皮肤的防护", "头发的清洁", "神奇的心脏", "肺部呼吸原理", "大脑发育过程", "骨骼与关节", "肌肉的力量", "日常食物分类", "干净的饮用水", "牛奶的营养价值", "面包的制作过程", "稻谷与米饭", "美味的水果", "绿色蔬菜", "肉类食品安全", "体育运动常识", "足球运动魅力", "羽毛球运动技巧", "游泳的乐趣", "跑步锻炼方法", "骑自行车的安全", "历史故事人物", "中华传统文化", "优美的音乐旋律", "美术绘画基础", "少儿舞蹈艺术", "民间传统游戏", "奇妙的物理现象", "数学基础运算", "现代科技应用", "电脑的日常用途", "互联网的世界", "神秘的太空探索", "自然资源能源", "电的产生原理", "磁铁的吸引力", "光线的传播路径", "声音是怎样产生的", "热能转换常识", "万有引力概念", "干净的饮用水源", "新鲜的空气质量", "家庭绿色菜园", "畜牧养殖科学", "淡水养鱼技术", "现代生态农业", "交通工具演变", "汽车的发展史", "火车的旅行", "飞机的飞行原理", "轮船航行奥秘", "居家安全防范", "防范火灾知识", "急救基础小知识", "日常礼仪规范"];
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 3000; i++) {
       const tId = i % zhNonFictionTemplates.length;
       const topic = topics[i % topics.length];
 
